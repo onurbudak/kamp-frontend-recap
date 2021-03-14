@@ -1,22 +1,23 @@
 <!-- <div class="spinner-border text-primary" role="status">
     <span class="visually-hidden">Loading...</span>
   </div> -->
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Id</th>
-        <th>Araba İsmi</th>
-        <th>Müşteri İsmi</th>
-        <th>Kiralama Tarihi</th>
-        <th>Teslim Tarihi</th>
-      </tr>
-    </thead>
-    <tr >
-      <!-- <td>{{ product.productId }}</td>
-      <td>{{ product.productName }}</td>
-      <td>{{ product.categoryId }}</td>
-      <td>{{ product.unitPrice }}</td>
-      <td>{{ product.unitsInStock }}</td> -->
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Araba Adı</th>
+      <th>Müşteri Adı Soyadı</th>
+      <th>Ücret</th>
+      <th>Kiralama Tarihi</th>
+      <th>Teslim Tarihi</th>
     </tr>
-  </table>
-  
+  </thead>
+  <tr *ngFor="let carRental of carRentals">
+    <td>{{ carRental.id }}</td>
+    <td>{{ carRental.carName }}</td>
+    <td>{{ carRental.customerFullName }}</td>
+    <td>{{ carRental.dailyPrice }} tl</td>
+    <td>{{ carRental.rentDate }}</td>
+    <td>{{ carRental.returnDate }}</td>
+  </tr>
+</table>

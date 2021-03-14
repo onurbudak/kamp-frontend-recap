@@ -1,4 +1,11 @@
 <ul class="list-group">
-    <li class="list-group-item">An item</li>
-  </ul>
-  
+  <li *ngFor="let car of cars" class="list-group-item">
+    {{ car.id }} -
+    {{ car.carName }} -
+    {{ car.brandName }} -
+    {{ car.colorName }} -
+    {{ car.modelYear }} -
+    {{ car.dailyPrice }} -
+    {{ car.descriptions }}
+  </li>
+</ul>
