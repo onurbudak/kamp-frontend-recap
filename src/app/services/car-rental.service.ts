@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class CarRentalService {
 
-  apiUrl = 'https://localhost:44377/api/rentals/getRentACarDetail';
+  apiUrl = 'https://localhost:44377/api/rentals/getRentACarDetail?carId=0';
 
   constructor(private httpClient: HttpClient) { }
 
