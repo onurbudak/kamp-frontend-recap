@@ -1,3 +1,5 @@
 <ul class="list-group">
-  <li class="list-group-item">An item</li>
+  <li *ngFor="let color of colors" class="list-group-item">
+    {{ color.id }} - {{ color.colorName }}
+  </li>
 </ul>
