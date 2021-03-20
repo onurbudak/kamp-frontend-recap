@@ -7,7 +7,7 @@
   </ul>
 </table> -->
 
-<table class="table">
+<table *ngIf="dataLoaded==true" class="table">
   <thead>
     <tr>
       <th>Id</th>
@@ -18,7 +18,7 @@
       <th>Açıklama</th>
     </tr>
   </thead>
-  <tr *ngFor="let car of cars">
+  <tr *ngFor="let car of cars" (click)="setCurrentCar(car)" >
     <td>{{ car.id }}</td>
     <td>{{ car.brandName }} {{ car.carName }}</td>
     <td>{{ car.colorName }} </td>
@@ -27,3 +27,4 @@
     <td>{{ car.descriptions }}</td>
   </tr>
 </table>
+<app-car-detail></app-car-detail>

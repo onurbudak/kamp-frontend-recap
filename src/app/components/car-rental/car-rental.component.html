@@ -1,7 +1,7 @@
 <!-- <div class="spinner-border text-primary" role="status">
     <span class="visually-hidden">Loading...</span>
   </div> -->
-<table class="table">
+<table *ngIf="dataLoaded==true" class="table">
   <thead>
     <tr>
       <th>Id</th>

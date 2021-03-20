@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CarComponent implements OnInit {
   cars: Car[] = [];
+  currentCar:Car;
   dataLoaded = false;
 
   constructor(private carService: CarService,
@@ -27,6 +28,11 @@ export class CarComponent implements OnInit {
         this.getCars();
       }
     })
+  }
+
+  setCurrentCar(car:Car){
+    this.currentCar = car;
+    console.log(this.currentCar);
   }
 
   getCars() {
