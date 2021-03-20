@@ -1,11 +1,29 @@
-<ul class="list-group">
-  <li *ngFor="let car of cars" class="list-group-item">
-    {{ car.id }} -
-    {{ car.carName }} -
-    {{ car.brandName }} -
-    {{ car.colorName }} -
-    {{ car.modelYear }} -
-    {{ car.dailyPrice }} -
-    {{ car.descriptions }}
-  </li>
-</ul>
+<!-- <table class="table">
+  <h5>Araçlar</h5>
+  <ul class="list-group">
+    <li *ngFor="let car of cars" class="list-group-item">
+      {{ car.brandName }} {{ car.carName }} 
+    </li>
+  </ul>
+</table> -->
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Araba Adı</th>
+      <th>Renk</th>
+      <th>ModelYılı</th>
+      <th>Ücret (tl)</th>
+      <th>Açıklama</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let car of cars">
+    <td>{{ car.id }}</td>
+    <td>{{ car.brandName }} {{ car.carName }}</td>
+    <td>{{ car.colorName }} </td>
+    <td>{{ car.modelYear }}</td>
+    <td>{{ car.dailyPrice }} tl</td>
+    <td>{{ car.descriptions }}</td>
+  </tr>
+</table>
